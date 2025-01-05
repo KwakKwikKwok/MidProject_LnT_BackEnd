@@ -14,4 +14,4 @@ Tutorial :
   - Add User [+] : Add new user data
   - View : view user data
   - Edit : modify user data 
-  - Delete : Red delete button will triger alert boc. Click Yes to delete user data.
+  - Delete : Red delete button will triger alert box. Click Yes to delete user data.
