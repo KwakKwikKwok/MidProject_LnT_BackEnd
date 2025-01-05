@@ -1,0 +1,15 @@
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    padding-top: 100px;
+}
+
+.title-container h1 {
+    font-family: 'Mitr', cursive;
+    font-size: 64px;
+    margin: 0;
+    color: #FFFFFF;
+}
+
