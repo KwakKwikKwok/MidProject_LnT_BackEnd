@@ -68,16 +68,17 @@ $user = $uc->getOneUser($_GET['id'] = 1);
     document.getElementById("logoutBtn").addEventListener("click", function(event) {
         event.preventDefault();
         showAlert("warningLogout");
-
+    });
+    
     function showAlert(alertId) {
         const alertBox = document.getElementById(alertId);
         alertBox.style.display = 'block';
     }
-
+    
     function closeAlert(alertId) {
         const alertBox = document.getElementById(alertId);
         alertBox.style.display = 'none';
-    }
+    } 
 </script>
 
 
