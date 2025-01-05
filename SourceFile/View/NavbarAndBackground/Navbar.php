@@ -18,7 +18,7 @@
           <div class="account-container d-flex flex-column align-items-end me-4">
               <a href="Profile.php" style = "text-decoration: none; color:white;">
               <div class="welcome" >Welcome,</div>
-              <div class="acc-name"><strong>AdminBNCC</strong></div>
+              <div class="acc-name"><strong><?=$_SESSION['name']?></strong></div>
             </div>
             <div class="acc-icon" >
               <img src="../Assets/Icon/Account.png" style="width: 50px; height: auto;" alt="Account Icon">

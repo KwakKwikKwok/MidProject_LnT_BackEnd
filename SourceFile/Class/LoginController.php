@@ -17,8 +17,16 @@ class LoginController extends Users {
         $result = $this->validateInput();
 
         if($result === true){
+            if(isset($data['remember'])){
+                setcookie("email", $data['email'], time()+1800, "/"); //30 menit
+                setcookie("pass", $data['pass'], time()+1800, "/"); //30 menit
+            }
+
             session_start();
             $_SESSION['login'] = true;
+            $user = $this->getUserEmail($this->email);
+            $user = $user[0];
+            $_SESSION['name'] = $user['first_Name'];
 
             header("Location: Dashboard.php");
             exit();

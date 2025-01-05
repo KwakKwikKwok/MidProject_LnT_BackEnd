@@ -1,6 +1,8 @@
 <?php
 require_once '../Class/LoginController.php';
 
+
+
 $lc = new LoginController();
 if(isset($_POST['loginBtn'])){
     $lc->login($_POST);
@@ -79,6 +81,7 @@ if (isset($_GET['error'])) {
                     <div class="two-forms">
                     <div class="input-box">
                         <input
+                        value="<?= !empty($_COOKIE['email']) ? $_COOKIE['email'] : ''?>"
                         type="text"
                         class="input-field"
                         placeholder="Username"
@@ -89,6 +92,7 @@ if (isset($_GET['error'])) {
                     </div>
                     <div class="input-box">
                         <input
+                        value="<?= !empty($_COOKIE['pass']) ? $_COOKIE['pass'] : ''?>"
                         type="password"
                         class="input-field"
                         placeholder="Password"
@@ -99,6 +103,10 @@ if (isset($_GET['error'])) {
                         <span class="eye-icon" id="togglePassword" style="top: 25px;">
                             <img src="../Assets/Icon/Eye-open.png" alt="Toggle Password" id="eyeIcon" style="width: 20px; height: auto;">
                         </span>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input name="remember" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-table" style="color:white;" for="flexCheckDefault">Remember Me</label>
                     </div>
                     <button class="submit" name="loginBtn">Submit</button>
                     </div>
